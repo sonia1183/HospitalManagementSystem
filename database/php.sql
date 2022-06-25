@@ -42,14 +42,14 @@ CREATE TABLE `appointment` (
 --
 
 INSERT INTO `appointment` (`id`, `date`, `time`, `username`, `doctorname`, `disease`) VALUES
-(1, '2022-06-24', '11-1', 'rishi', 'rishi', 'mild'),
+(1, '2022-06-25', '11-1', 'rishi', 'rishi', 'mild'),
 (2, '2022-05-26', '6-8', 'rishi', 'rishi', 'emergency'),
-(3, '2022-06-26', '8-10', 'rishikumar', 'vikkram', 'serious'),
+(3, '2022-06-25', '8-10', 'rishikumar', 'vikkram', 'serious'),
 (4, '2022-12-11', '6-8', 'rishikumar', 'vikkram', 'emergency'),
 (5, '2022-10-11', '9-11', 'susa', 'rishi', 'serious'),
 (6, '2022-09-24', '6-8', 'sridevi', 'sridevi', 'serious'),
 (7, '2022-11-21', '8-10', 'neetesh', 'rishi', 'emergency'),
-(8, '2022-06-30', '9-11', 'rishi', 'rishi', 'mild');
+(8, '2022-06-25', '9-11', 'rishi', 'rishi', 'emergency');
 
 -- --------------------------------------------------------
 
@@ -65,6 +65,7 @@ CREATE TABLE `doctors` (
   `address` text NOT NULL,
   `phno` varchar(15) NOT NULL,
   `qualification` text NOT NULL,
+  `joining date` date NOT NULL,
   `department` text NOT NULL,
   `uname` varchar(32) NOT NULL,
   `pass` varchar(32) NOT NULL
@@ -74,12 +75,12 @@ CREATE TABLE `doctors` (
 -- Dumping data for table `doctors`
 --
 
-INSERT INTO `doctors` (`name`, `dob`, `mail`, `docid`, `address`, `phno`, `qualification`, `department`, `uname`, `pass`) VALUES
-('rishi', '2019-04-02', 'rishi@gmail.com', 1, 'v nagar', '2147483647', 'mbbs', 'neurology', 'rishi', 'rishi'),
-('rishi kumar', '2019-04-10', 'rishikumar@gmail.com', 0, 'mambalam', '2147483647', 'mbbs', 'heart', 'rishikumar', 'rishikumar'),
-('vikkram', '2019-04-05', 'vikkram@gmail.com', 7, 'mambalam', '2147483647', 'mbbs', 'ortho', 'vikkram', 'vikkram'),
-('susa', '2019-05-10', 'susa@gmail.com', 3, 'd nagar', '9847562585', 'mbbs', 'medical', 'susa', 'susa'),
-('sridevi', '2019-08-16', 'sridevi@gmail.com', 14, 'chennai', '9962628272', 'mbbs', 'mind', 'sridevi', 'sridevi');
+INSERT INTO `doctors` (`name`, `dob`, `mail`, `docid`, `address`, `phno`, `qualification`,`joining date`, `department`, `uname`, `pass`) VALUES
+('rishi', '1999-04-02', 'rishi@gmail.com', 1, 'v nagar', '2147483647', 'mbbs','2022-03-02', 'neurology', 'rishi', 'rishi'),
+('sonia', '2002-05-06', 'rishikumar@gmail.com', 0, 'mambalam', '2147483647', 'mbbs','2022-06-25', 'heart', 'rishikumar', 'rishikumar'),
+('vikkram', '1997-04-05', 'vikkram@gmail.com', 7, 'mambalam', '2147483647', 'mbbs', '2022-06-25','ortho', 'vikkram', 'vikkram'),
+('susa', '1993-05-10', 'susa@gmail.com', 3, 'd nagar', '9847562585', 'mbbs','2022-06-25', 'medical', 'susa', 'susa'),
+('sridevi', '1976-08-16', 'sridevi@gmail.com', 14, 'chennai', '9962628272', 'mbbs','2022-06-25', 'mind', 'sridevi', 'sridevi');
 
 -- --------------------------------------------------------
 
@@ -119,11 +120,11 @@ CREATE TABLE `patient` (
 --
 
 INSERT INTO `patient` (`name`, `dob`, `mail`, `uname`, `password`) VALUES
-('rishi', '2019-04-03', 'rishi@gmail.com', 'rishi', 'rishi'),
-('rishi kumar', '2019-04-17', 'rishikumar@gmail.com', 'rishikumar', 'rishikumar'),
-('susa', '2019-05-22', 'susa@gmail.com', 'susa', 'susa'),
-('sridevi', '2019-08-15', 'sridevi@gmail.com', 'sridevi', 'sridevi'),
-('Neetesh', '2019-11-18', 'neetesh@gmail.com', 'neetesh', '1234');
+('rishi', '2009-04-03', 'rishi@gmail.com', 'rishi', 'rishi'),
+('rishi kumar', '2007-04-17', 'rishikumar@gmail.com', 'rishikumar', 'rishikumar'),
+('susa', '1998-05-22', 'susa@gmail.com', 'susa', 'susa'),
+('sridevi', '1997-08-15', 'sridevi@gmail.com', 'sridevi', 'sridevi'),
+('Neetesh', '2006-11-18', 'neetesh@gmail.com', 'neetesh', '1234');
 
 -- --------------------------------------------------------
 

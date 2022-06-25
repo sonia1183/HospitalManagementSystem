@@ -35,5 +35,3 @@ if ($result->num_rows==0) {
         echo"<script type='text/javascript'>window.alert('Something went wrong :(');window.location='admin_dashboard.php';</script>";
     }
 }
-    
-

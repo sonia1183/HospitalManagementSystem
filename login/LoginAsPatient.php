@@ -21,9 +21,3 @@ if (isset($_POST['uname'])) {
     }
 }
 ?>
-
-
-
-
-
-

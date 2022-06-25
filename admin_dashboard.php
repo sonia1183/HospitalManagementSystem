@@ -1,18 +1,30 @@
-<?php
-        session_start();
-?>
-<!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>RRV Hospitals</title>
-    <meta name="keywords" content="RRV Hospitals">
-    <meta name="description" content="Developed By Rishi Raj G">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Medical Care Hospitals</title>
+    <meta name="keywords" content="Medical Care">
+    <meta name="description" content="Team Project">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#nav-placeholder").load("nav.html");
+      });
+    </script>
     <style>
+        table {
+            border-collapse: separate;
+            width: 100%;
+            color: black;
+            font-size: 15px;}
+   …
+ <?php
+        session_start();
+?>
+
     .upload {
         margin-top: 50px;
         padding: 40px;
@@ -77,7 +89,7 @@
         <div class="row">
             <div class="col-md-10">
                 <?php
-                    echo "<h3>Welcome  ";
+                    echo "<h3>Welcome  Dr ";
                     echo $_SESSION["name"];
                     ?>
             </div>

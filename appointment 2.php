@@ -1,5 +1,5 @@
 <?php
-$conn=mysqli_connect("localhost:3306","root","","dbhms");
+$conn=mysqli_connect("localhost:3306","root","","hms");
 if(!$conn){
 die("Database Connect Error");
 }
@@ -20,6 +20,3 @@ else{
 }
 mysqli_close($conn);
 ?>
-
-
-

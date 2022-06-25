@@ -18,11 +18,10 @@
         table {
             border-collapse: separate;
             width: 100%;
-            color: orange;
-            font-size: 25px;
-            border-color: white;
+            color: black;
+            font-size: 15px;
+            border-bottom : 2px solid grey;
             text-align: left;
-            background-color: rgba(0, 0, 0, 0.5);
             border-radius: 5px;
             -webkit-border-radius: 5px;
             -o-border-radius: 5px;
@@ -33,11 +32,11 @@
 
 <body>
     <div id="nav-placeholder"></div>
-    <h1 style="color:black;font-size: 45px;text-align:center;margin:30px;">Our Doctors Here!</h1>
+    <h1 style="color:green;font-size:45px;text-align:center;margin:30px;">Our Doctors Here!</h1>
     <div class="container">
         <div class="table-responsive">
             <table class="table table-hover striped">
-                <thead class="thead-dark">
+                <thead class="thead">
                     <tr>
                         <th>Doctor Id</th>
                         <th>Name</th>
@@ -47,7 +46,7 @@
                         <th>Department</th>
                     </tr>
                 </thead>
-                <tbody style="color:white">
+                <tbody>
                     <?php
                         require "conn.php";
                         $sql="select * from doctors";

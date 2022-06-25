@@ -26,6 +26,14 @@
       $(document).ready(function () {
         $("#nav-placeholder").load("nav.html");
       });
+      function getCurrentDate() {
+            let dateObj = new Date();
+            let month = String(dateObj.getMonth() + 1).padStart(2, '0');
+            let day = String(dateObj.getDate()).padStart(2, '0');
+            let year = dateObj.getFullYear();
+            let output = day + '/' + month + '/' + year;
+            document.querySelector('.output').textContent = output;
+        }
     </script>
   </head>
 
@@ -48,7 +56,6 @@
           type="text"
           name="name"
           placeholder="Please Enter Your Name...."
-          required
         />
             </td>
           </tr>
@@ -63,7 +70,6 @@
           type="date"
           name="dob"
           placeholder="Please Enter Your Date Of Birth...."
-          required
         />
             </td>
           </tr>
@@ -74,7 +80,6 @@
               type="text"
               name="docid"
               placeholder="Please Enter Your Doctor Id...."
-              required
             /></td>
           </tr>
 
@@ -84,7 +89,6 @@
               type="email"
               name="mail"
               placeholder="Please Enter Your Mail Id...."
-              required
             /></td>
           </tr>
 
@@ -94,7 +98,6 @@
               type="text"
               name="address"
               placeholder="Please Enter Your Address...."
-              required
             /></td>
           </tr>
 
@@ -104,7 +107,6 @@
               type="text"
               name="phno"
               placeholder="Please Enter Your Phone number...."
-              required
             /></td>
           </tr>
 
@@ -114,17 +116,24 @@
               type="text"
               name="qualification"
               placeholder="Please Enter Your Qualification...."
-              required
             /></td>
           </tr>
-
+<tr>
+  <td>
+    <label>
+      Joining Date:
+    </label>
+  </td>
+  <td>
+    <input type="date" name="joindate" placeholder="getCurrentDate()" value="getCurrentDate()" >
+  </td>
+</tr>
           <tr>
             <td><label>Enter your department : </label></td>
             <td> <input
               type="text"
               name="department"
               placeholder="Please Enter Your Depatment...."
-              required
             /></td>
           </tr>
 
@@ -134,7 +143,6 @@
               type="text"
               name="uname"
               placeholder="Please Enter Username...."
-              required
             /></td>
           </tr>
 
@@ -145,7 +153,6 @@
               name="pass"
               id="pass"
               placeholder="Please Enter Password...."
-              required
             /></td>
           </tr>
 
@@ -156,7 +163,6 @@
               name="repass"
               id="rpass"
               placeholder="Please Re Enter Password...."
-              required
             /></td>
           </tr>
 
